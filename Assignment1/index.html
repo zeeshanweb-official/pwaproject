@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <style>
+      #errormesg{
+        background-color: red;
+      }
+      </style>
+<title>GitFollowersGetter</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+            <div class="container m-5">
+                    <div class="text-center text-capitalize"><h1>Get the Git Followers of Your Account</h1></div>
+                    <form id="formsubmit">
+                      <div class="form-group">
+                        <label for="name">User Name:</label>
+                        <input id="name" type="text" class="form-control" placeholder="Please Enter Your Github UserName" name="username" id="usernameid"/>
+                      </div>
+                      <button onClick="get(event)" type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                  </div>
+       
+       <table class="table table-hover">
+                    <thead >
+                      <tr><th></th>
+                        <th>#</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>User ID</th>
+                        <th>User URL</th>
+                      </tr>
+                    </thead>
+                    <tbody id="show">
+                    </tbody>
+       </table>
+<div class="text-center" id="errormesg">No Follower Found or Internet is Disabled</div>
+    </body>
+    <script src="index.js"></script>
+</html>
